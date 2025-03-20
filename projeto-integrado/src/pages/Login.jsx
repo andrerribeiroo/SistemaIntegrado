@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./Login.css";
+import "./Login.css"; // Arquivo de estilos
 
 const Login = ({ login }) => {
   const [email, setEmail] = useState("");
@@ -14,10 +14,10 @@ const Login = ({ login }) => {
       return;
     }
 
-   //caso a administração do sistema
+    // Simulação de autenticação
     if (email === "admin@email.com" && senha === "123456") {
       login();
-      navigate("/educa");
+      navigate("/educa"); // Redireciona para a página principal após o login
     } else {
       setAlerta("E-mail ou senha incorretos!");
     }

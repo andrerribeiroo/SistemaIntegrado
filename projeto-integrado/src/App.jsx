@@ -5,7 +5,6 @@ import {
   Navigate,
   useLocation,
 } from "react-router-dom";
-import { GraduationCap, Apple, Heart } from 'lucide-react';
 import { useState } from "react";
 import NavBarra from "./components/NavBarra";
 import EducaMais from "./pages/EducaMais";
@@ -14,7 +13,7 @@ import ConectSus from "./pages/ConectSus";
 import SistemaCard from "./components/SistemaCard";
 import Cadastro from "./pages/Cadastro";
 import Login from "./pages/Login";
-import EsqueciSenha from "./pages/Esquecisenha"; 
+import EsqueciSenha from "./pages/Esquecisenha"; // Importando a página Esqueci Senha
 import Footer from "./pages/Footer";
 
 function MainContent({ isAuthenticated, login }) {
@@ -22,13 +21,13 @@ function MainContent({ isAuthenticated, login }) {
   const isCadastroPage =
     location.pathname === "/cadastro" ||
     location.pathname === "/login" ||
-    location.pathname === "/esqueci-senha";
+    location.pathname === "/esqueci-senha"; // Adicionei a rota /esqueci-senha
 
-    const systems = [
-      { id: 'educa', name: 'Educa Mais', icon: GraduationCap, color: 'blue' },
-      { id: 'fome', name: 'Fome 0', icon: Apple, color: 'green' },
-      { id: 'sus', name: 'Conect SUS', icon: Heart, color: 'red' }
-    ];
+  const systems = [
+    { id: "educa", name: "Educa Mais", title: "LOGO" },
+    { id: "fome", name: "Fome 0", title: "LOGO" },
+    { id: "sus", name: "Conect SUS", title: "LOGO" },
+  ];
 
   return (
     <main className="main-content">
@@ -49,7 +48,7 @@ function MainContent({ isAuthenticated, login }) {
           <Route path="/cadastro" element={<Cadastro />} />
           <Route path="/login" element={<Login login={login} />} />
           <Route path="/esqueci-senha" element={<EsqueciSenha />} />{" "}
-         
+          {/* Adicionando a nova rota */}
         </Routes>
       </div>
     </main>
