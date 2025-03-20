@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import './EsqueciSenha.css'; // Importando o CSS
+import './EsqueciSenha.css'; 
 
 const EsqueciSenha = () => {
   const [email, setEmail] = useState("");
@@ -13,12 +13,9 @@ const EsqueciSenha = () => {
       return;
     }
 
-    // Aqui você pode integrar a lógica para enviar um link de recuperação de senha
-    console.log("Enviando link para recuperação de senha para o email:", email);
-
     setAlerta("");
     alert("Link de recuperação de senha enviado para o seu e-mail.");
-    navigate("/login"); // Redireciona para a página de login após o envio
+    navigate("/login"); 
   };
 
   return (

@@ -14,7 +14,7 @@ import ConectSus from "./pages/ConectSus";
 import SistemaCard from "./components/SistemaCard";
 import Cadastro from "./pages/Cadastro";
 import Login from "./pages/Login";
-import EsqueciSenha from "./pages/Esquecisenha"; // Importando a página Esqueci Senha
+import EsqueciSenha from "./pages/Esquecisenha"; 
 import Footer from "./pages/Footer";
 
 function MainContent({ isAuthenticated, login }) {
@@ -22,7 +22,7 @@ function MainContent({ isAuthenticated, login }) {
   const isCadastroPage =
     location.pathname === "/cadastro" ||
     location.pathname === "/login" ||
-    location.pathname === "/esqueci-senha"; // Adicionei a rota /esqueci-senha
+    location.pathname === "/esqueci-senha";
 
     const systems = [
       { id: 'educa', name: 'Educa Mais', icon: GraduationCap, color: 'blue' },
@@ -49,7 +49,7 @@ function MainContent({ isAuthenticated, login }) {
           <Route path="/cadastro" element={<Cadastro />} />
           <Route path="/login" element={<Login login={login} />} />
           <Route path="/esqueci-senha" element={<EsqueciSenha />} />{" "}
-          {/* Adicionando a nova rota */}
+         
         </Routes>
       </div>
     </main>
